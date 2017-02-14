@@ -200,7 +200,7 @@ tag_docker_image() {
     exit 1
   else
     info_output "Docker tag $1 $2"
-    docker tag -f "$1" "$2"
+    docker tag "$1" "$2"
     if [ $? -ne 0 ]; then
       echo "Docker tag failed. Check your stuff mang or ask Chuck Norris."
       exit 1
